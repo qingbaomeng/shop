@@ -11,12 +11,16 @@
     <style amp-custom>
         /* any custom style goes here */
         body {
+            overflow:hidden;
             background-color: white;
+            width:100%;height:100%;
         }
         amp-img {
             background-color: gray;
             border: 1px solid black;
         }
+        /*html,body {overflow:hidden;margin:0px;width:100%;height:100%;}*/
+        .virtual_body {width:100%;height:100%;overflow-y:scroll;overflow-x:auto;}
         .fixed_div {
             position:absolute;
             z-index:2008;
@@ -32,7 +36,7 @@
 </head>
 <body>
 <div class="fixed_div">工具</div>
-<div>
+<div class="virtual_body">
 <amp-img
         src="../img/address.jpeg" height="960" width="1280"
         srcset="../img/anmo.jpeg 640w,
@@ -62,7 +66,6 @@
             srcset="../img/anmo.jpeg 640w,
                 ../img/address.jpeg 900w"
             sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
-
 </div>
 </body>
 </html>
