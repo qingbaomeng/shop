@@ -17,20 +17,52 @@
             background-color: gray;
             border: 1px solid black;
         }
-        .test{
-            background-color: red;
-            width: 200px;
+        .fixed_div {
+            position:absolute;
+            z-index:2008;
+            top:0px;
+            left:0px;
+            right:16px;
+            height:40px;
+            background:#CCCCCC;
+            border-bottom:3px inset;
+            border-color:#006699;
         }
     </style>
 </head>
 <body>
-
-<div class="test">
+<div class="fixed_div">工具</div>
+<div>
 <amp-img
         src="../img/address.jpeg" height="960" width="1280"
         srcset="../img/anmo.jpeg 640w,
                 ../img/address.jpeg 900w"
-        sizes="(min-width: 100px) 20vw, 100vw"></amp-img>
+        sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
+    <amp-img
+            src="../img/address.jpeg" height="960" width="1280"
+            srcset="../img/anmo.jpeg 640w,
+                ../img/address.jpeg 900w"
+            sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
+    <amp-img
+            src="../img/address.jpeg" height="960" width="1280"
+            srcset="../img/anmo.jpeg 640w,
+                ../img/address.jpeg 900w"
+            sizes="(min-width: 100px) 50vw, 100vw"></amp-img><amp-img
+        src="../img/address.jpeg" height="960" width="1280"
+        srcset="../img/anmo.jpeg 640w,
+                ../img/address.jpeg 900w"
+        sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
+    <amp-img
+            src="../img/address.jpeg" height="960" width="1280"
+            srcset="../img/anmo.jpeg 640w,
+                ../img/address.jpeg 900w"
+            sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
+    <amp-img
+            src="../img/address.jpeg" height="960" width="1280"
+            srcset="../img/anmo.jpeg 640w,
+                ../img/address.jpeg 900w"
+            sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
+
 </div>
 </body>
 </html>
