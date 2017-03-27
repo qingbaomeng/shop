@@ -1,71 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta charset="utf-8">
     <link rel="canonical" href="index.html.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <script src="../js/vendor/jquery-1.12.0.min.js"></script>
     <title>产品列表</title>
     <style amp-custom>
-        /* any custom style goes here */
-        body {
-            /*overflow:hidden;*/
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background-color: silver;
+        }
+        /*超链接的样式:蓝色按钮*/
+        a
+        {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            font:normal normal normal 18px/50px 'Microsoft Yahei';
+            background-color: #00b3ee;
+            text-align: center;
+            margin: 100px 200px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /*人为制造一个占据整个屏幕的Div,其透明度为0.7且z-index为9999使之前的页面被压在底层无法点击*/
+        #fullScreen
+        {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 40px;
+            opacity: 0.7;
             background-color: white;
-            /*width:100%;height:100%;*/
+            z-index: 9999;
+            overflow: scroll;
         }
-        amp-img {
-            background-color: gray;
-            border: 1px solid black;
+        /*浮层,可随意设置大小宽高，但是z-index必须比上面fullScreen大才能显示出来*/
+        #floatLayer
+        {
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            background-color: #cccccc;
+            z-index: 10000;
         }
-        html,body {overflow:hidden;margin:0px;width:100%;height:100%;}
-        .virtual_body {width:100%;height:100%;overflow-y:scroll;overflow-x:auto;}
-        .fixed_div {
-            position:absolute;
-            z-index:2008;
-            top:0px;
-            left:0px;
-            right:0px;
-            height:40px;
-            background:#CCCCCC;
-            border-bottom:3px inset;
-            border-color:#006699;
+        .toptoolbar{
+            margin-left: 15px;
+            margin-top: 12px;
+            width: 20px;
+            height: 100%;
+        }
+        .toolbartitle{
+            margin-left: 100px;
+            margin-top: 12px;
+            /*width: auto;*/
+            height: 100%;
         }
     </style>
 </head>
 <body>
-<div class="fixed_div">工具</div>
-<div class="virtual_body">
-<amp-img
-        src="../img/address.jpeg" height="960" width="1280"
-        srcset="../img/anmo.jpeg 640w,
-                ../img/address.jpeg 900w"
-        sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
-    <amp-img
-            src="../img/address.jpeg" height="960" width="1280"
-            srcset="../img/anmo.jpeg 640w,
-                ../img/address.jpeg 900w"
-            sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
-    <amp-img
-            src="../img/address.jpeg" height="960" width="1280"
-            srcset="../img/anmo.jpeg 640w,
-                ../img/address.jpeg 900w"
-            sizes="(min-width: 100px) 50vw, 100vw"></amp-img><amp-img
-        src="../img/address.jpeg" height="960" width="1280"
-        srcset="../img/anmo.jpeg 640w,
-                ../img/address.jpeg 900w"
-        sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
-    <amp-img
-            src="../img/address.jpeg" height="960" width="1280"
-            srcset="../img/anmo.jpeg 640w,
-                ../img/address.jpeg 900w"
-            sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
-    <amp-img
-            src="../img/address.jpeg" height="960" width="1280"
-            srcset="../img/anmo.jpeg 640w,
-                ../img/address.jpeg 900w"
-            sizes="(min-width: 100px) 50vw, 100vw"></amp-img>
+<!--<a href="#" id="show">出现浮层</a>-->
+<div id='floatLayer'>
+    <!--<amp-img src="../img/navigate.png" height="35" width="38"-->
+    <!--srcset="../img/navigate.png 20w"-->
+    <!--sizes="(min-width: 100px) 50vw, 100vw"></amp-img>-->
+
+    <div class="toptoolbar">
+        <amp-img src="../img/navigate.png" height="15" width="21"></amp-img>
+    </div>
+    <div class="toolbartitle">
+        <p>恒美靓颜</p>
+    </div>
 </div>
+<div id='fullScreen'>
+
+    <p><amp-img src="../img/address.jpeg" height="100" width="100"></amp-img></p>
+</div>
+
 </body>
 </html>
+
+<script>
+    $("document").ready(function()
+    {
+        //点击弹出浮层
+        $("#show").click(function()
+        {
+            //清除之前的样式
+            $("#fullScreen,#floatLayer").remove();
+            $("body").append
+            (
+                //占据整个屏幕Div
+                "<div id='fullScreen'></div>"+
+                //浮层区
+                "<div id='floatLayer'>" +
+                "<a href='#' id='hide'>隐藏浮层</a>"+
+                "</div>"
+            );
+            //隐藏浮层
+            $("#hide").click(function()
+            {
+                $("#fullScreen,#floatLayer").remove();
+            });
+        });
+    });
+</script>
