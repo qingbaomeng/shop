@@ -13,14 +13,48 @@
         body {
             background-color: white;
         }
-        amp-img {
-            background-color: gray;
-            border: 1px solid black;
+        #floatLayer {
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            background-color: #cccccc;
+            z-index: 10000;
         }
+        .toptoolbar{
+            float:left;
+            margin-left: 15px;
+            width: 30%;
+            height: 50px;
+            line-height: 50px;
+        }
+        .titletxt{
+            float:left;
+            width: 30%;
+            height: 50px;
+            line-height: 50px;
+            overflow:hidden;
+            font-size: 23px;
+        }
+
+
+        /*amp-img {*/
+            /*background-color: gray;*/
+            /*border: 1px solid black;*/
+        /*}*/
         .activity{
             max-width: 960px;
             text-align: center;
             margin: auto;
+
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 40px;
+            opacity: 0.7;
+            background-color: white;
+            z-index: 9999;
+            overflow: scroll;
         }
 
         .rich_media_title{
@@ -32,11 +66,25 @@
     </style>
 </head>
 <body>
+<div id='floatLayer'>
+    <!--<amp-img src="../img/navigate.png" height="35" width="38"-->
+    <!--srcset="../img/navigate.png 20w"-->
+    <!--sizes="(min-width: 100px) 50vw, 100vw"></amp-img>-->
+    <div id="toolbuttoon" class="toptoolbar">
+        <amp-img src="img/navigate.png" height="15" width="21"></amp-img>
+    </div>
+    <div class="titletxt">
+        恒美靓颜
+    </div>
+</div>
+
+<div id="buttonlist"></div>
+
 <div class="activity">
     <h2 class="rich_media_title" id="activity-name">
         感恩回馈卡(只限30张)
     </h2>
-    <a href="html/product.html">产品</a>
+    <!--<a href="html/product.html">产品</a>-->
     <div class="textdiv">
         <p>恒美靓颜300元快乐感恩回馈卡预祝开抢啦(只限30张)！！！订卡均享300元本店任选产品，另送780元套盒一套，
             再送880元玫瑰 女人护理卡(两次面部，两次身体，此卡仅限本人使用)。房村计生办直对面
@@ -56,3 +104,9 @@
 </div>
 </body>
 </html>
+
+<script>
+//    $("#toolbuttoon").click(function(){
+//        $("#buttonlist").hidden
+//    });
+</script>
