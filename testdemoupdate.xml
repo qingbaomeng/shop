@@ -10,7 +10,7 @@
                 http://you.com/app/2.0.html
             </sparkle:releaseNotesLink>
             <pubDate>Wed, 09 Jan 2006 19:20:11 +0000</pubDate>
-            <enclosure url="https://qingbaomeng.github.io/shop/TestDemo_1.1.zip" sparkle:version="1.1" sparkle:shortVersionString="1.0" length="1196545" type="application/octet-stream" sparkle:dsaSignature="MCwCFEpZiQs0XUI00G6kCnQrES0Dv/oZAhRdeTxgu8ARe6qG91oyCvDP9rUkvw==" />
+            <enclosure url="https://qingbaomeng.github.io/shop/TestDemo_1.1.zip" sparkle:version="1" sparkle:shortVersionString="1.0" length="1196545" type="application/octet-stream" sparkle:dsaSignature="MCwCFEpZiQs0XUI00G6kCnQrES0Dv/oZAhRdeTxgu8ARe6qG91oyCvDP9rUkvw==" />
             <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
         </item>
     </channel>
