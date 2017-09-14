@@ -10,7 +10,17 @@
                 http://you.com/app/2.0.html
             </sparkle:releaseNotesLink>
             <pubDate>Wed, 09 Jan 2006 19:20:11 +0000</pubDate>
-            <enclosure url="https://qingbaomeng.github.io/shop/TestDemo_1.1.zip" sparkle:version="1" sparkle:shortVersionString="1.0" length="2536661" type="application/octet-stream" sparkle:dsaSignature="MCwCFFezBkROdXquijWZfFVLc17wzYceAhQPRYx0MwYo0fKluz7P4AZp3EAQxQ==" />
+            <enclosure url="https://qingbaomeng.github.io/shop/XiGuTool_1.1.zip" sparkle:version="1" sparkle:shortVersionString="1.1" length="2537394" type="application/octet-stream" sparkle:dsaSignature="MC0CFHwBEi87T9UkQNoQcKMPaCKzbG/pAhUAt+CqfniKDxJfSIcpXUDmUKVBlgk=" />
+            <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>update content description</title>
+            <sparkle:releaseNotesLink>
+                http://you.com/app/2.0.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Wed, 09 Jan 2006 19:20:11 +0000</pubDate>
+            <enclosure url="https://qingbaomeng.github.io/shop/XiGuTool_1.0.zip" sparkle:version="1" sparkle:shortVersionString="1.0" length="2536661" type="application/octet-stream" sparkle:dsaSignature="MCwCFFezBkROdXquijWZfFVLc17wzYceAhQPRYx0MwYo0fKluz7P4AZp3EAQxQ==" />
             <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
         </item>
     </channel>
