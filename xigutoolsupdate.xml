@@ -10,7 +10,7 @@
                 http://you.com/app/2.0.html
             </sparkle:releaseNotesLink>
             <pubDate>Wed, 09 Jan 2006 19:20:11 +0000</pubDate>
-            <enclosure url="https://qingbaomeng.github.io/shop/XiGuTool_1.1.zip" sparkle:version="1" sparkle:shortVersionString="1.1" length="2537394" type="application/octet-stream" sparkle:dsaSignature="MC0CFHwBEi87T9UkQNoQcKMPaCKzbG/pAhUAt+CqfniKDxJfSIcpXUDmUKVBlgk=" />
+            <enclosure url="https://qingbaomeng.github.io/shop/XiGuTool_1.1.zip" sparkle:version="1" sparkle:shortVersionString="1.1" length="2537394" type="application/octet-stream" sparkle:dsaSignature="MC0CFEf8KokQsL59xY70lFWgT6PpVe3OAhUAkZjhEEEHLbPrEOMyvxThYLN2+yY=" />
             <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
         </item>
 
