@@ -1,1 +1,1 @@
-{"name":"111111","note":"111111","url":"https://qingbaomeng.github.io/shop/app/TestSdkDemo.ipa","code":"2.0"}
+{"name":"111111","note":"111111","url":"https://qingbaomeng.github.io/shop/app/TestSdkDemo.ipa","code":"2"}
