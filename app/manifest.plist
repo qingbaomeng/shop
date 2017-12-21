@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://qingbaomeng.github.io/shop/app/TestSdkDemo.ipa</string>
+					<string>https://qingbaomeng.github.io/shop/app/shachenggame.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -29,7 +29,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.mchdemo.paysdk</string>
+				<string>com.ceshi.company</string>
 				<key>bundle-version</key>
 				<string>1.6</string>
 				<key>kind</key>
