@@ -31,7 +31,7 @@
     //js调用APP-传单个参数
              function callNativeApp(){
                 try{
-                    webkit.messageHandlers.ipreplaceGoback.postMessage()
+                    webkit.messageHandlers.ipreplaceGoback.postMessage("111")
                 }catch(error){
                     console.error('The native context not exist ')
                 }
