@@ -26,3 +26,46 @@
 
     
 </script>
+
+<script>
+    //js调用APP-传单个参数
+             function callNativeApp(){
+                try{
+                    webkit.messageHandlers.ipreplaceGoback.postMessage()
+                }catch(error){
+                    console.error('The native context not exist ')
+                }
+            }
+
+             //js调用APP-传单个参数
+             function callNativeApp1(){
+                try{
+                    webkit.messageHandlers.ipreplaceDetail.postMessage("http://www.baidu.com")
+                }catch(error){
+                    console.error('The native context not exist ')
+                }
+            }
+            //js调用APP-传多个参数
+            function callNativeApp2(){
+                try{
+                    webkit.messageHandlers.ipreplaceShare.postMessage({"title": "", "msg": "", "icon": "", "url": ""})
+                }catch(error){
+                    console.error('The native context not exist ')
+                }
+            }
+            //APP调用js
+            function changeHead(){
+                document.querySelector('h1').style.color = "red"
+            }
+            </script>
+
+            <button style="text-align:center;height:50px;width:200px;font-size:16px" onclick="callNativeApp()">无参数</button>
+
+            <button style="text-align:center;height:50px;width:200px;font-size:16px" onclick="callNativeApp1()">调用APP（单个参数）</button>
+
+            <button style="text-align:center;height:50px;width:220px;font-size:16px" onclick="callNativeApp2()">调用APP（多个个参数）</button>
+    </body>
+</html>
+
+
+
