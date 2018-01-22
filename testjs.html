@@ -48,7 +48,7 @@
             //js调用APP-传多个参数
             function callNativeApp2(){
                 try{
-                    webkit.messageHandlers.ipreplaceShare.postMessage({"title": "", "msg": "", "icon": "", "url": ""})
+                    webkit.messageHandlers.ipreplaceShare.postMessage({title: "", msg: "", icon: "", url: ""})
                 }catch(error){
                     console.error('The native context not exist ')
                 }
