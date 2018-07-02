@@ -62,7 +62,8 @@
     });
     function indexclick() {
         // window.location.href = "../index.html";
-        window.location.href = "weixin://";
+        // window.location.href = "weixin://";
+        window.webkit.messageHandlers.webviewback.postMessage()
     }
     function productclick() {
         // window.location.href = "html/product.html";
