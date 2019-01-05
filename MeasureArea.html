@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<script>
+
+    function drawButton() {
+        // hNum = window.innerHeight / 100 + 1;
+        // wNum = window.innerWidth / 100 + 1;
+        hNum = document.documentElement.clientHeight / 100 + 1;
+        wNum = document.documentElement.clientWidth / 100 + 1;
+        // alert(document.documentElement.clientHeight);
+        var allBtn = "";
+        for (var i = 0; i < hNum; i++){
+            allBtn += "<div>";
+            for (var j = 0; j < wNum; j++){
+                let btnId = i + "" + j
+                allBtn += "<button id='" + btnId + "' type='button' value='" + (i+j) + "' style='width: 100px; height: 100px'/>";
+            }
+            allBtn += "</div>";
+        }
+
+        document.getElementById("btnarea").innerHTML = allBtn;
+    }
+
+
+    function changeBtnColor(btnid) {
+
+    }
+</script>
+<body onload="drawButton()">
+<div style="width: max-content; height: max-content" id="btnarea">
+    <!--<button id="1" type="button" value="11" style='width: 100px; height: 100px' onclick="changeBtnColor('1')"/>-->
+</div>
+</body>
+</html>
